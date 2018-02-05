@@ -8,6 +8,7 @@ const path = require('path')
 const config = require(path.join(__dirname, 'package.json'))
 const BrowserWindow = electron.BrowserWindow
 
+
 app.setName(config.productName)
 var mainWindow = null
 app.on('ready', function () {

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <title>PayWalo Tool</title> -->
+  </head>
+  <body>
+    <div class="content">
+      <div class="container-fluid mx-sm-3 mb-2">
+        <br>
+        <h5>Offline QQ Pay Withdrawal</h5>
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <label for="Amount">Amount</label>
+              <input type="number" class="form-control" id="Amount" placeholder="10.05" value="10.01">
+            </div>
+            <!-- <div class="form-group col-md-3">
+              <label for="OrderDate">Order Date</label>
+              <input type="date" class="form-control" id="OrderDate" placeholder="OrderDate">
+            </div> -->
+            <!-- <div class="form-group col-md-3">
+              <label for="PaymentMethodCode">Payment Method Code</label>
+              <input type="text" class="form-control" id="PaymentMethodCode" placeholder="PaymentMethodCode">
+            </div> -->
+            <div class="form-group col-md-3">
+              <label for="AccountNumber">Player's Account ID</label>
+              <input type="text" class="form-control" id="AccountNumber" placeholder="Account Number" value="playeraccountid">
+            </div>
+            <!-- <div class="form-group col-md-3">
+              <label for="Currency">Currency</label>
+              <input type="text" class="form-control" id="Currency" placeholder="Currency" value="CNY">
+            </div> -->
+<!--
+            <div class="form-group col-md-3">
+              <label for="CallbackUrl">CallbackUrl</label>
+              <input type="text" class="form-control" id="CallbackUrl" placeholder="CallbackUrl" value="https://hookb.in/ZRQnnxxw">
+            </div>
+-->
+            <div class="form-group col-md-6">
+              <label for="Notes">Notes</label>
+              <input type="text" class="form-control" id="Notes" placeholder="Notes" value="{username:'wpineda',language:'en'}">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="Sign">Sign</label>
+              <input readonly type="text" class="form-control" id="Sign" placeholder="Sign">
+            </div>
+          </div>
+      </div>
+
+      <form>
+        <div class="form-group mb-2 col-md-3">
+          <label for="noreqlbl" class="sr-only"></label>
+          <input type="text" readonly class="form-control-plaintext" id="noreqlbl" value="No. of Requests">
+        </div>
+        <div class="form-group mb-2 col-md-3">
+          <label for="noreq" class="sr-only"></label>
+          <input type="number" class="form-control" id="noreq" placeholder="1" value="1">
+        </div>
+        <button id="sendrequest" class="btn btn-danger mb-2 col-md-3">Send Request</button>
+      </form>
+
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="httprequest"><h5>Request</h5></label>
+            <pre readonly class="form-control pre-scrollable" id="httprequest" rows="4"></pre>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="httpresult"><h5>Result</h5></label>
+            <pre readonly class="form-control pre-scrollable" id="httpresult" rows="4"></pre>
+          </div>
+        </div>
+      </form>
+
+<script src="assets/js/offlinewithdrawalqq.js"></script>
+<script src="../node_modules/crypto-js/crypto-js.js"></script>
+</body>
+</html>

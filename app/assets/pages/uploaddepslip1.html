@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <title>PayWalo Tool</title> -->
+  </head>
+  <body>
+    <div class="content">
+      <div class="container-fluid mx-sm-3 mb-2">
+        <br>
+        <h5>Upload Deposit Slip V2</h5>
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <label for="DepositSlipImage">Deposit Slip Image (Base64 String)</label>
+              <input type="text" class="form-control" id="DepositSlipImage" placeholder="DepositSlipImage">
+            </div>
+            <div class="form-group col-md-3">
+              <label for="TransactionNumber">Transaction Number</label>
+              <input type="text" class="form-control" id="TransactionNumber" placeholder="TransactionNumber">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="FileNameWithExtension">FileName With Extension</label>
+              <input type="text" class="form-control" id="FileNameWithExtension" placeholder="FileNameWithExtension" value="image.png">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="Sign">Sign</label>
+              <input readonly type="text" class="form-control" id="Sign" placeholder="Sign">
+            </div>
+          </div>
+      </div>
+
+      <form>
+        <div class="form-group mb-2 col-md-3">
+          <label for="noreqlbl" class="sr-only"></label>
+          <input type="text" readonly class="form-control-plaintext" id="noreqlbl" value="No. of Requests">
+        </div>
+        <div class="form-group mb-2 col-md-3">
+          <label for="noreq" class="sr-only"></label>
+          <input type="number" class="form-control" id="noreq" placeholder="1" value="1">
+        </div>
+        <button id="sendrequest" class="btn btn-danger mb-2 col-md-3">Send Request</button>
+      </form>
+
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="httprequest" class="mb-0"><h5>Request</h5></label>
+            <pre readonly class="form-control pre-scrollable" id="httprequest" rows="4"></pre>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="httpresult" class="mb-0"><h5>Result</h5></label>
+            <pre readonly class="form-control pre-scrollable" id="httpresult" rows="4"></pre>
+          </div>
+        </div>
+      </form>
+
+<script src="assets/js/uploaddepslip1.js"></script>
+<script src="../node_modules/crypto-js/crypto-js.js"></script>
+</body>
+</html>
